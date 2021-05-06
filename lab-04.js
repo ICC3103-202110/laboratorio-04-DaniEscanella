@@ -11,23 +11,22 @@
  };
 
  const functionApp = (counter) =>{
-     if (counter=="q") {
-         return counter
-     } else{
-        const currentView = functionView(counter);
-        console.clear();
-        console.log(currentView);
-        console.log();
-        console.log ('(+) (-)');
-        console.log();
-        console.log('(q) for quit');
-        const msg = prompt("What would you do? ")
+    const currentView = functionView(counter);
+    console.clear();
+    console.log(currentView);
+    console.log();
+    console.log ('(+) (-)');
+    console.log();
+    console.log('(q) for quit');
+    const msg = prompt("What would you do? ")
+    if (msg=='q'){
+        return counter
+    } else {
         counter = (functionUpdate(msg , counter));
         functionApp(counter);
-
      }
  };
  
- 
+ functionApp(0);
 
 
